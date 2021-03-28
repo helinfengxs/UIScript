@@ -1,0 +1,46 @@
+loginpage :
+  -
+    title : 登陆失败用例
+    case  :
+      -
+        name : 打开登陆页面
+        method : openUrl
+        url : http://www.helinfengxs.com/admin
+      -
+        name : 输入用户名
+        method : sendKeys
+        localtor : //input[@name="userName"]
+        value : helinfeng
+      -
+        name : 输入密码
+        method: sendKeys
+        localtor : //input[@name="passWord"]
+        value : xiao15982631
+      -
+        name : 点击登陆
+        method : click
+        localtor : //button[text()="登录"]
+      -
+        nane : 强制等待时间
+        method : sleep
+        second : 2
+  -
+    title: 登陆成功用例
+    case:
+      - name: 打开登陆页面
+        method: openUrl
+        url: http://www.helinfengxs.com/admin
+      - name: 输入用户名
+        method: sendKeys
+        localtor: //input[@name="userName"]
+        value: helinfeng
+      - name: 输入密码
+        method: sendKeys
+        localtor: //input[@name="passWord"]
+        value: xiao1598263
+      - name: 点击登陆
+        method: click
+        localtor: //button[text()="登录"]
+
+
+
